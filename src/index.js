@@ -2,7 +2,6 @@ import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./db/index.js";
 import { app } from "./app.js";
-
 app.on("error", (error) => {
     console.log("ERROR:", error);
     throw error;
@@ -17,8 +16,6 @@ connectDB()
     .catch((err) => {
         console.log("MONGO DB connect !!!", err);
     });
-
-    
 
 // import mongoose from "mongoose";
 // import { DB_NAME } from "./constant.js";
